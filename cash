@@ -16,7 +16,7 @@ int main(void)
     int coins = round(n*100);
     int q = coins/25;
     int qchange = coins - q*25;
-        if (qchange>0)
+        if (qchange!==0)
            d = qchange/10;
             if (d>1)
               dchange = qchange - d*10;
