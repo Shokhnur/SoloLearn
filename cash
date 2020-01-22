@@ -1,0 +1,61 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    float m = .2;
+    int d;
+    int n;
+    int p;
+    int dchange;
+    int nchange;
+    do 
+        m = get_float("Change needed: ");
+    while (n<0);
+    int coins = round(n*100);
+    int q = coins/25;
+    int qchange = coins - q*25;
+        if (qchange>0)
+           d = qchange/10;
+            if (d>1)
+              dchange = qchange - d*10;
+               if (dchange>0)
+                  n = dchange/5;
+                    if (n>1)
+                      nchange = dchange - n*5; 
+                        if (nchange>0)
+                           p = nchange/1;
+                             if (p>0)
+                                (printf("%i \n", q+d+n+p));
+                             else 
+                             {
+                                 (printf("%i \n", q+d+n));
+                             }
+                        else 
+                        {
+                            (printf("%i \n", q+d+n));
+                        }
+                    else 
+                    {
+                        (printf("%i \n", q+d+n));
+                    }
+               else 
+               {
+                   (printf("%i \n", q+d));
+               }
+            else 
+            {
+                (printf("%i \n", q+d));
+            }
+        else 
+        {
+            printf("%i \n", q);
+        }
+            
+                         {
+                             printf(" \n");
+                         }
+    
+    
+}
